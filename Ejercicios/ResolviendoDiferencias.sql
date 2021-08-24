@@ -20,5 +20,19 @@ ORDER BY a.carrera_id;
 SELECT * 
 FROM platzi.alumnos AS a
 LEFT JOIN platzi.carreras AS c
+<<<<<<< HEAD
 ON a.carrera_id = c.id
+=======
+ON a.carrera_id = c.id;
+
+--Otra forma con FULL OUTER JOIN (Recomendada)
+SELECT a.nombre, 
+		a.apellido,
+		a.carrera_id,
+		c.id,
+		c.carrera
+FROM platzi.alumnos AS a
+	LEFT JOIN platzi.carreras AS c
+	ON a.carrera_id = c.id
+WHERE c.id IS NULL
 ORDER BY a.carrera_id;
