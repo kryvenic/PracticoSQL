@@ -20,5 +20,5 @@ ORDER BY a.carrera_id;
 SELECT * 
 FROM platzi.alumnos AS a
 LEFT JOIN platzi.carreras AS c
-ON a.carrera_id = c.id;
-
+ON a.carrera_id = c.id
+ORDER BY a.carrera_id;
