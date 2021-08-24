@@ -38,3 +38,7 @@ ORDER BY a.carrera_id;
 -- Solucion:
 SELECT lpad('\', id, '/') 
 FROM generate_series(0,50) as id;
+
+-- 2da Solucion
+SELECT lpad('*', CAST(ordinality AS int), '*')
+FROM generate_series(50, 2, -2) WITH ordinality;
